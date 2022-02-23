@@ -16,3 +16,35 @@ body {
 main {
     height: 100vh;
 }
+
+.options {
+    background-color: hsl(235, 46%, 20%);
+}
+
+.work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercice {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare {
+    background-color: hsl(42, 84%, 65%);
+}
+
+.time {
+    background-color: hsl(235, 46%, 20%);
+}

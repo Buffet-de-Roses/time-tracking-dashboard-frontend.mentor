@@ -18,9 +18,18 @@ p {
     padding: 0;
     font-family: 'Rubik';
     color: white;
+    font-weight: 300;
+    opacity: 0.6;
 }
 
 h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+    color: white;
+}
+
+h3 {
     margin: 0;
     padding: 0;
     font-family: 'Rubik';
@@ -31,11 +40,24 @@ main {
     height: 100vh;
 }
 
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 24px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". profile work play study ."
+      ". profile exercise social self-care ."
+      ". . . . . .";
+  } 
+
 .options {
     background-color: hsl(235, 46%, 20%);
     width: 255px;
     height: 515px;
     border-radius: 10px;
+    grid-area: options;
 }
 
 .profile {
@@ -75,9 +97,17 @@ li {
 }
 
 div.dashboard {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 24px 24px; 
+    grid-template-areas: 
+        ". . . . . ."
+        ". options work play study ."
+        ". options exercise social self-care ."
+        ". . . . . .";
+    height: 100vh;
+    width: 100vw;
 }
 
 div.card {
@@ -96,35 +126,65 @@ div.card span {
 }
 
 .time {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     position: absolute;
     top: 45px;
     right: 0;
-    height: 100%;
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box; /* box-sizign: border-box -> add padding without changing the size of the div*/
+    padding: 32px;
+}
+
+.icon-three-dots {
+    color: white;
+    opacity: 0.7;
+}
+
+.hours {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 44px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .work {
     background-color: hsl(15, 100%, 70%);
+    grid-area: work;
 }
 
 .play {
     background-color: hsl(195, 74%, 62%);
+    grid-area: play;
 }
 
 .study {
     background-color: hsl(348, 100%, 68%);
+    grid-area: study;
 }
 
-.exercice {
+.exercise {
     background-color: hsl(145, 58%, 55%);
+    grid-area: exercise;
 }
 
 .social {
     background-color: hsl(264, 64%, 52%);
+    grid-area: social;
 }
 
-.selfcare {
+.self-care {
     background-color: hsl(42, 84%, 65%);
+    grid-area: self-care;
 }
 
 .time {
